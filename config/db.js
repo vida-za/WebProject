@@ -7,8 +7,13 @@ const client = new Client({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
-client.connect();
+client.connect()
+  .then(() => console.log('Postgres connected!'))
+  .catch(err => console.error('Postgres connection error:', err));
 
 module.exports = client;
