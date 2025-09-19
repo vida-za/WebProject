@@ -12,7 +12,7 @@ const makeQuery = async (req, res) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                model: 'deepseek-chat',
+                model: 'gpt-3.5-turbo',
                 messages: [{ role: 'user', content: message }]
             })
         });
