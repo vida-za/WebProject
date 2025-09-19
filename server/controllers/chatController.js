@@ -31,4 +31,24 @@ const makeQuery = async (req, res) => {
     }
 };
 
-module.exports = { makeQuery };
+
+const getModels = async (req, res) => {
+    try {
+        const response = await fetch('https://api.openai.com/v1/models', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
+            }
+        });
+
+        const data = await response.json();
+        console.error('Models:', data);
+
+        res.json({ reply: data });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'OpenAI request models failed' });
+    }
+}
+
+module.exports = { makeQuery, getModels };
