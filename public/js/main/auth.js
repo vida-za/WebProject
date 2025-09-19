@@ -54,6 +54,7 @@ const checkAuth = async () => {
     if (res.ok) {
         const user = await res.json();
         console.log('You authorized:', user.item.username);
+        queryModels();
     } else {
         window.location.href = 'login.html';
     }
@@ -65,6 +66,12 @@ const logout = async () => {
         credentials: 'include'
     });
     window.location.href = 'login.html';
+}
+
+const queryModels = async () => {
+  await fetch('/api/models', {
+    method: 'GET'
+  });
 }
 
 window.checkAuth = checkAuth;
