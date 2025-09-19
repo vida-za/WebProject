@@ -5,50 +5,26 @@ const makeQuery = async (req, res) => {
     if (!message) return res.status(400).json({ error: 'No message provided' });
 
     try {
-        const response = await fetch('https://api.openai.com/v1/chat/completions', {
+        const response = await fetch('https://llm.api.cloud.yandex.net/foundationModels/v1/completion', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
-                'Content-Type': 'application/json'
+                'Authorization': `Bearer ${process.env.YANDEX_IAM_KEY}`,
+                'Content-Type': 'application/json',
+                'x-folder-id': `${process.env.FOLDER_ID}`
             },
             body: JSON.stringify({
-                model: 'gpt-3.5-turbo-1106',
-                messages: [{ role: 'user', content: message }]
+                modelUri: 'yandexgpt-lite/latest',
+                temperature: 0.5,
+                messages: [{ role: 'system', text: 'Ты помощник, помоги' }, { role: 'user', text: message }]
             })
         });
 
         const data = await response.json();
-
-        if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-            console.error('Invalid response from OpenAI:', data);
-            return res.status(500).json({ error: 'Invalid response from OpenAI', data });
-        }
-
-        res.json({ reply: data.choices[0].message.content });
+        res.json(data);
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'OpenAI request failed' });
     }
 };
 
-
-const getModels = async (req, res) => {
-    try {
-        const response = await fetch('https://api.openai.com/v1/models', {
-            method: 'GET',
-            headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
-            }
-        });
-
-        const data = await response.json();
-        console.error('Models:', data);
-
-        res.json({ reply: data });
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: 'OpenAI request models failed' });
-    }
-}
-
-module.exports = { makeQuery, getModels };
+module.exports = { makeQuery };
