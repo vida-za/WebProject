@@ -1,0 +1,15 @@
+.button {
+	padding: 1rem 1.4rem;
+	border-radius: 0.8rem;
+	border: 1px solid #ffffff;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: rgba(#fff, 0.5);
+		color: #000;
+	}
+
+	&_gray {
+		border: 1px solid #ccc;
+	}
+}

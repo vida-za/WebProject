@@ -1,0 +1,47 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+
+# Build / compiled files
+dist/
+build/
+.bundle/
+*.bundle.js
+*.min.js
+*.map
+
+# Webpack / cache
+.cache/
+.cache-loader/
+.cachepack/
+
+# Sass / CSS compiled
+public/css/*.css.map
+public/css/*.min.css
+
+# IDE / OS files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+.DS_Store
+Thumbs.db
+
+# Optional coverage reports
+coverage/
+
+*.Identifier
+*.save

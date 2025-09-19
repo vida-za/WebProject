@@ -1,0 +1,12 @@
+.block {
+	margin: 3rem 0;
+
+	&_text {
+		margin-inline: 2rem;
+		padding-bottom: 1rem;
+
+		& p:last-child {
+			margin-bottom: 24px !important;
+		}
+	}
+}

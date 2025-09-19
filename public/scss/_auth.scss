@@ -1,0 +1,70 @@
+// Файл: auth.scss
+
+$primary-color: #42794e;
+$background-color: #42794e;
+$input-background: #f1dbdb;
+$input-border: #ccc;
+$border-radius: 6px;
+$transition-speed: 0.3s;
+
+body.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+}
+
+.auth-container {
+  background-color: $input-background;
+  padding: 40px 30px;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  align-items: center;
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: $primary-color;
+  }
+
+  a {
+    color: #42794e;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      border: 1px solid $input-border;
+      border-radius: $border-radius;
+      font-size: 16px;
+      transition: border-color $transition-speed, box-shadow $transition-speed;
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 5px rgba($primary-color, 0.5);
+        outline: none;
+      }
+    }
+
+    button {
+      padding: 12px;
+      background-color: $primary-color;
+      color: #fff;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color $transition-speed;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

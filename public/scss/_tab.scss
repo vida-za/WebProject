@@ -1,0 +1,78 @@
+.tabs {
+	position: relative;
+	font-family: Arial, sans-serif;
+
+	/* 1) Скрываем radio-кнопки */
+	input[type="radio"] {
+		display: none;
+	}
+
+	/* 2) Стили для контейнера заголовков */
+	&__header {
+		display: flex;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: -1px;
+
+		label {
+			padding: 10px 20px;
+			cursor: pointer;
+			color: #000;
+			background-color: #f0f0f0;
+			border: 1px solid #ccc;
+			border-bottom: none;
+			margin-right: -1px;
+			transition: background-color 0.2s, color 0.2s;
+
+			&:hover,
+			&:focus {
+				background-color: #2ec96e;
+				color: #fff;
+			}
+		}
+	}
+
+	/* 3) Активный label, когда радио :checked */
+	input[type="radio"]#tab-1:checked ~ &__header label[for="tab-1"],
+	input[type="radio"]#tab-2:checked ~ &__header label[for="tab-2"],
+	input[type="radio"]#tab-3:checked ~ &__header label[for="tab-3"],
+	input[type="radio"]#tab-4:checked ~ &__header label[for="tab-4"] {
+		background-color: #27ae60;
+		color: #fff;
+		border-color: #27ae60;
+		border-bottom: 1px solid transparent;
+	}
+
+	/* 4) Контент */
+	&__content {
+		border: 1px solid #ccc;
+		background-color: #ffffff;
+		padding: 20px;
+		position: relative;
+		min-height: 150px;
+
+		.tabs__item {
+			display: none;
+			color: #333333;
+			line-height: 1.5;
+		}
+	}
+
+	/* 5) Отображаем нужный .tabs__item по radio:checked */
+	#tab-1:checked ~ &__content #content-1 {
+		display: block;
+	}
+	#tab-2:checked ~ &__content #content-2 {
+		display: block;
+	}
+	#tab-3:checked ~ &__content #content-3 {
+		display: block;
+	}
+	#tab-4:checked ~ &__content #content-4 {
+		display: block;
+	}
+
+	/* 6) Настраиваем блок для удаления */
+	.delete__block {
+		margin: 5px 5px 5px 5px;
+	}
+}

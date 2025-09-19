@@ -1,0 +1,31 @@
+#pointList li::before {
+  content: '🏢 ';
+}
+
+#typeList li::before {
+  content: '♻️ ';
+}
+
+#pointList li, #typeList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#pointList li button,
+#typeList li button {
+  margin-left: 10px;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#pointList li button:hover,
+#typeList li button:hover {
+  background-color: #c0392b;
+}

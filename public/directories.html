@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочники</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header__icon">
+                    <a href="./index.html">
+                        <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 457.729 457.729" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <polygon
+                                        points="138.009,216.05 69.477,234.414 50.76,164.562 0,252.871 11.673,273.044 105.249,273.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="274.8,353.39 181.185,259.775 180.574,259.775 180.574,303.044 29.031,303.044 87.647,404.347 180.574,404.347 180.574,447.616 ">
+                                    </polygon>
+                                    <polygon
+                                        points="279.467,150.116 298.809,77.929 365.017,95.669 315.047,10.113 291.752,10.113 245.27,90.623 ">
+                                    </polygon>
+                                    <polygon
+                                        points="218.57,163.406 218.875,162.877 181.404,141.242 257.175,10.113 140.137,10.113 93.672,90.591 56.201,68.956 90.69,197.671 ">
+                                    </polygon>
+                                    <polygon
+                                        points="266.881,303.044 317.226,353.39 266.27,404.347 367.73,404.347 381.068,381.095 336.005,303.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="411.266,170.794 448.738,149.16 320.023,114.671 285.757,242.551 286.063,243.08 323.535,221.446 399.306,352.686 457.729,251.272 ">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="header__title">СУО</span>
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a class="button header__link" href="./reports.html">Учёт отходов</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a class="button header__link" href="directories.html">Управление справочниками</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container container_white">
+            <div class="block">
+                <h1 class="text-center">Управление справочниками</h1>
+            </div>
+
+            <div class="block block_text">
+                <div class="tabs">
+                    <input class="hide" type="radio" name="tabs-group" id="tab-1" checked>
+                    <input class="hide" type="radio" name="tabs-group" id="tab-2">
+                    <input class="hide" type="radio" name="tabs-group" id="tab-3">
+                    <input class="hide" type="radio" name="tabs-group" id="tab-4">
+
+                    <div class="tabs__header">
+                        <label for="tab-1">Добавить пункт приёма</label>
+                        <label for="tab-2">Добавить тип отходов</label>
+                        <label for="tab-3">Добавить достижение</label>
+                        <label for="tab-4">Добавить отчёт</label>
+                    </div>
+
+                    <div class="tabs__content">
+                        <div class="tabs__item" id="content-1">
+                            <h3 class="text-center">Добавить пункт приёма</h3>
+                            <form class="form" id="pointForm" autocomplete="off">
+                                <div class="form__item">
+                                    <label>Название:</label>
+                                    <input class="input" type="text" name="name" required />
+                                </div>
+                                <div class="form__item">
+                                    <label>Адрес:</label>
+                                    <input class="input" type="text" name="address" required />
+                                </div>
+                                <button class="button button_gray js-button-submit" type="submit">Добавить</button>
+                            </form>
+                            <div class="js-form-responce form-responce"></div>
+                        </div>
+
+                        <div class="tabs__item" id="content-2">
+                            <h3 class="text-center">Добавить тип отходов</h3>
+                            <form class="form" id="typeForm" autocomplete="off">
+                                <div class="form__item">
+                                    <label>Название:</label>
+                                    <input class="input" type="text" name="name" required />
+                                </div>
+                                <div class="form__item">
+                                    <label>Описание:</label>
+                                    <input class="input" type="text" name="description" />
+                                </div>
+                                <div class="form__item">
+                                    <label>Эко-очки:</label>
+                                    <input class="input" type="number" name="ecoscore" min="1" value="1" />
+                                </div>
+                                <button class="button button_gray js-button-submit" type="submit">Добавить</button>
+                            </form>
+                            <div class="js-form-responce form-responce"></div>
+                        </div>
+
+                        <div class="tabs__item" id="content-3">
+                            <h3 class="text-center">Добавить достижение</h3>
+                            <form class="form" id="achievementForm" autocomplete="off">
+                                <div class="form__item">
+                                    <label>Название:</label>
+                                    <input class="input" type="text" name="title" required />
+                                </div>
+                                <div class="form__item">
+                                    <label>Описание:</label>
+                                    <input class="input" type="text" name="description" />
+                                </div>
+                                <div class="form__item">
+                                    <label>Очков для достижения:</label>
+                                    <input class="input" type="number" name="requiredscore" min="1" value="1" />
+                                </div>
+                                <button class="button button_gray js-button-submit" type="submit">Добавить</button>
+                            </form>
+                            <div class="js-form-responce form-responce"></div>
+                        </div>
+                        
+                        <div class="tabs__item" id="content-4">
+                            <h3 class="text-center">Добавить отчёт</h3>
+                            <form class="form" id="reportForm" autocomplete="off">
+                                <div class="form__item">
+                                    <label for="pointSelect">Пункт приема:</label>
+                                    <select
+                                        id="pointSelect"
+                                        class="input"
+                                        name="recyclingpointid"
+                                        required data-url="/api/recycling-point"
+                                        data-placeholder="Выберите пункт приема"
+                                        data-value-key="id"
+                                        data-text-key="name">
+                                            <option disabled selected>Загрузка...</option>
+                                    </select>
+                                </div>
+                                <div class="form__item">
+                                    <label for="wasteTypeSelect">Тип отходов:</label>
+                                    <select 
+                                        id="wasteTypeSelect"
+                                        class="input"
+                                        name="wastetypeid" 
+                                        required data-url="/api/waste-types" 
+                                        data-placeholder="Выберите тип отходов" 
+                                        data-value-key="id" 
+                                        data-text-key="name">
+                                            <option disabled selected>Загрузка...</option>
+                                    </select>
+                                </div>
+                                <div class="form__item">
+                                    <label>Количество:</label>
+                                    <input class="input" type="number" name="quantity" min="1" value="1" />
+                                </div>
+                                <button class="button button_gray js-button-submit" type="submit">Добавить</button>
+                            </form>
+                            <div class="js-form-responce form-responce"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer__icon">
+                    <a href="./index.html">
+                        <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 457.729 457.729" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <polygon
+                                        points="138.009,216.05 69.477,234.414 50.76,164.562 0,252.871 11.673,273.044 105.249,273.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="274.8,353.39 181.185,259.775 180.574,259.775 180.574,303.044 29.031,303.044 87.647,404.347 180.574,404.347 180.574,447.616 ">
+                                    </polygon>
+                                    <polygon
+                                        points="279.467,150.116 298.809,77.929 365.017,95.669 315.047,10.113 291.752,10.113 245.27,90.623 ">
+                                    </polygon>
+                                    <polygon
+                                        points="218.57,163.406 218.875,162.877 181.404,141.242 257.175,10.113 140.137,10.113 93.672,90.591 56.201,68.956 90.69,197.671 ">
+                                    </polygon>
+                                    <polygon
+                                        points="266.881,303.044 317.226,353.39 266.27,404.347 367.73,404.347 381.068,381.095 336.005,303.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="411.266,170.794 448.738,149.16 320.023,114.671 285.757,242.551 286.063,243.08 323.535,221.446 399.306,352.686 457.729,251.272 ">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="footer__title">СУО</span>
+                    </a>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="./reports.html">Учёт отходов</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="directories.html">Управление справочниками</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <a href="tel:74959529161">+7 (495) 952-91-61</a>
+                    <a href="mailto:pkb1@zdrav.mos.ru">pkb1@zdrav.mos.ru</a>
+                    <p>117152, город Москва, Загородное шоссе, дом 2</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./dist/bundle.js" defer></script>
+</body>
+
+</html>

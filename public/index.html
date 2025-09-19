@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасем экологию!</title>
+    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <div class="header__icon">
+                    <a href="./index.html">
+                        <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 457.729 457.729" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <polygon
+                                        points="138.009,216.05 69.477,234.414 50.76,164.562 0,252.871 11.673,273.044 105.249,273.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="274.8,353.39 181.185,259.775 180.574,259.775 180.574,303.044 29.031,303.044 87.647,404.347 180.574,404.347 180.574,447.616 ">
+                                    </polygon>
+                                    <polygon
+                                        points="279.467,150.116 298.809,77.929 365.017,95.669 315.047,10.113 291.752,10.113 245.27,90.623 ">
+                                    </polygon>
+                                    <polygon
+                                        points="218.57,163.406 218.875,162.877 181.404,141.242 257.175,10.113 140.137,10.113 93.672,90.591 56.201,68.956 90.69,197.671 ">
+                                    </polygon>
+                                    <polygon
+                                        points="266.881,303.044 317.226,353.39 266.27,404.347 367.73,404.347 381.068,381.095 336.005,303.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="411.266,170.794 448.738,149.16 320.023,114.671 285.757,242.551 286.063,243.08 323.535,221.446 399.306,352.686 457.729,251.272 ">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="header__title">СУО</span>
+                    </a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li class="header__list-item">
+                            <a class="button header__link" href="./reports.html">Учёт отходов</a>
+                        </li>
+                        <li class="header__list-item">
+                            <a class="button header__link" href="directories.html">Управление справочниками</a>
+                        </li>
+                        <li class="header__list-item">
+                            <button class="button" onclick="logout()">Выйти</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container container_white">
+            <div class="block">
+                <h1 class="text-center">Добро пожаловать в систему учёта отходов</h1>
+            </div>
+            <div class="block block_text">
+                <p>
+                    В современном мире забота об окружающей среде становится всё более актуальной. Загрязнение улиц, 
+                    неправильная утилизация отходов и отсутствие культуры сортировки — всё это создаёт угрозу не только 
+                    для экологии, но и для качества жизни людей.
+                    <br/>
+                    <b>Система учёта отходов (СУО)</b> — это современное решение, которое помогает организовать процесс сбора, 
+                    сортировки и утилизации мусора. Наша цель — сделать город чище, безопаснее и комфортнее для всех.
+                </p>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/slider_1.webp" alt="icon1" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider_2.webp" alt="icon2" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider_3.webp" alt="icon3" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider_4.webp" alt="icon4" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/slider_5.webp" alt="icon5" class="swiper__img">
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <h3>Что даёт вам наша система?</h3>
+                <ul>
+                    <li>
+                        <b>Прозрачность и контроль.</b> Вы всегда знаете, какие отходы, в каком количестве и куда были переданы. 
+                        Удобные отчёты позволяют анализировать данные и принимать обоснованные решения.
+                    </li>
+                    <li>
+                        <b>Чистота и порядок во дворах.</b> Уменьшается количество несанкционированных свалок и неорганизованных точек сбора мусора.
+                    </li>
+                    <li>
+                        <b>Поддержка раздельного сбора.</b> Система стимулирует внедрение культуры сортировки, что снижает нагрузку 
+                        на полигоны и способствует переработке вторсырья.
+                    </li>
+                    <li>
+                        <b>Повышение ответственности.</b> Каждый участник процесса — от жильца до управляющей компании — становится 
+                        частью единого экологического подхода.
+                    </li>
+                </ul>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/second_slider_1.webp" alt="icon" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/second_slider_2.webp" alt="icon" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/second_slider_3.webp" alt="icon" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/second_slider_4.webp" alt="icon" class="swiper__img">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/second_slider_5.webp" alt="icon" class="swiper__img">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                
+                <h3>Почему это важно?</h3>
+                <p>
+                    Отходы — это не просто то, что мы выбрасываем. Это показатель того, как мы относимся к окружающей среде и друг к другу. 
+                    Организованная система обращения с мусором позволяет:
+                </p>
+                <ul>
+                    <li>Улучшить санитарное состояние районов.</li>
+                    <li>Предотвратить распространение инфекций и неприятных запахов.</li>
+                    <li>Повысить уровень экологического образования среди населения.</li>
+                </ul>
+
+                <h3>Присоединяйтесь!</h3>
+                <p>
+                    Воспользуйтесь возможностями системы учёта отходов уже сегодня. Регистрация займёт всего пару минут, 
+                    а вклад в чистоту вашего района — останется надолго.
+                </p>
+                <p>
+                    <b>Сделаем наш город чище — вместе!</b>
+                </p>
+            </div>
+            <div class="block">
+                <div class="chat">
+                    <div id="messages"></div>
+                    <div>
+                        <input class="input" type="text" id="userInput" placeholder="Напиши сообщение..."/>
+                        <button class="button" id="sendBtn">Отправить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <div class="footer__icon">
+                    <a href="./index.html">
+                        <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 457.729 457.729" xml:space="preserve">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g>
+                                    <polygon
+                                        points="138.009,216.05 69.477,234.414 50.76,164.562 0,252.871 11.673,273.044 105.249,273.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="274.8,353.39 181.185,259.775 180.574,259.775 180.574,303.044 29.031,303.044 87.647,404.347 180.574,404.347 180.574,447.616 ">
+                                    </polygon>
+                                    <polygon
+                                        points="279.467,150.116 298.809,77.929 365.017,95.669 315.047,10.113 291.752,10.113 245.27,90.623 ">
+                                    </polygon>
+                                    <polygon
+                                        points="218.57,163.406 218.875,162.877 181.404,141.242 257.175,10.113 140.137,10.113 93.672,90.591 56.201,68.956 90.69,197.671 ">
+                                    </polygon>
+                                    <polygon
+                                        points="266.881,303.044 317.226,353.39 266.27,404.347 367.73,404.347 381.068,381.095 336.005,303.044 ">
+                                    </polygon>
+                                    <polygon
+                                        points="411.266,170.794 448.738,149.16 320.023,114.671 285.757,242.551 286.063,243.08 323.535,221.446 399.306,352.686 457.729,251.272 ">
+                                    </polygon>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="footer__title">СУО</span>
+                    </a>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="./reports.html">Учёт отходов</a>
+                        </li>
+                        <li class="footer__list-item">
+                            <a class="footer__link" href="directories.html">Управление справочниками</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <a href="tel:74959529161">+7 (495) 952-91-61</a>
+                    <a href="mailto:pkb1@zdrav.mos.ru">pkb1@zdrav.mos.ru</a>
+                    <p>117152, город Москва, Загородное шоссе, дом 2</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./dist/bundle.js" defer></script>
+</body>
+
+</html>
