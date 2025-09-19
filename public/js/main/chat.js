@@ -15,7 +15,7 @@ sendBtn.addEventListener('click', async () => {
   });
 
   const data = await response.json();
-  appendMessage('ИИ', data.reply);
+  appendMessage('ИИ', data.text);
   userInput.value = '';
 });
 
