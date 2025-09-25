@@ -15,7 +15,13 @@ sendBtn.addEventListener('click', async () => {
   });
 
   const data = await response.json();
-  appendMessage('ИИ', data.text);
+
+  let reply = "Ошибка: нет ответа от ИИ"
+  if (data.result && data.result.alternatives) {
+    reply = data.result.alternatives[0].message.text;
+  }
+
+  appendMessage('ИИ', reply);
   userInput.value = '';
 });
 
